@@ -30,6 +30,10 @@ export class App extends React.Component {
     }, 3300);
   }
 
+  componentWillUnmount(): void {
+    window.clearInterval(this.timerId);
+  }
+
   handleLeftClick = () => {
     this.setState({ hasClock: true });
   };
